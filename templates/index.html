@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<script>
+    function hello() {
+        alert("Hej")
+    }
+</script>
+
+{% endblock %}
+
+{% block body %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
+<div class="header">
+  <h1> Chojnacki Drone Systems 1.1.1.1.2 </h1>
+</div>
+
+<br>
+
+<button class="button_system" onclick="server.connect()"> SYSTEM START </button>
+<button class="enginetest" onclick="server.enginetest()"> ENGINE TEST </button>
+
+
+
+<h2> Commands : </h2>
+
+<button class="button" onclick="server.takeoff()"> Take Off </button>
+<button class="button" onclick="server.takeofffromhand()"> Take Off From Hand </button>
+<button class="button" onclick="server.land()"> Land </button>
+
+           <!--  <button class="button" onclick="hello()"> Hello </button> --!>
+
+
+<h2> Tricks : </h2>
+
+<button class="button" onclick="server.flipf()"> Flip Forward </button>
+<button class="button" onclick="server.flipb()"> Flip Backwards </button>
+
+<h2> Battery Level (%): </h2>
+<p id = "battery"> // Awaiting System Start //  </p>
+
+<h2 id = "systemmess"> System Message: </h2>
+            <p id = "count"> // Awaiting System Start // </p>
+
+{% endblock %}
