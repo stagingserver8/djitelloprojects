@@ -1,6 +1,9 @@
 import pygame
 #Detecting key press
 
+hello
+
+
 #function init
 def init():
     pygame.init()
